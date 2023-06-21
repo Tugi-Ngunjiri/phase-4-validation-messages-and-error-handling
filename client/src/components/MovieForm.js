@@ -12,6 +12,11 @@ function MovieForm() {
     category: "",
     discount: false,
     female_director: false,
+
+
+
+
+    
   });
 
   function handleSubmit(e) {
@@ -23,8 +28,7 @@ function MovieForm() {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
-      .then((newMovie) => console.log(newMovie));
+       .then((response) => console.log(response));
   }
 
   function handleChange(e) {
@@ -35,6 +39,12 @@ function MovieForm() {
       [e.target.id]: value,
     });
   }
+
+
+
+
+
+
 
   return (
     <Wrapper>
@@ -153,5 +163,7 @@ const SubmitButton = styled.button`
   padding: 8px 16px;
   cursor: pointer;
 `;
+
+
 
 export default MovieForm;
